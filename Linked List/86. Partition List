@@ -1,0 +1,22 @@
+public class Solution {
+    public ListNode partition(ListNode head, int x) {
+        ListNode dummyLow = new ListNode(0);
+        ListNode dummyHigh = new ListNode(0);
+        ListNode low = dummyLow;
+        ListNode high = dummyHigh;
+        ListNode curr = head;
+        while(curr!=null){
+            if(curr.val<x){
+                low.next = curr;
+                low = curr;
+            }else{
+                high.next = curr;
+                high = curr;
+            }
+            curr = curr.next;
+        }
+        low.next = dummyHigh.next;
+        high.next = null;
+        return dummyLow.next;
+    }
+}
