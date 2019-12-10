@@ -14,7 +14,7 @@ public class Solution {
     
     public int lengthOfLongestSubstring(String s) {
         Map<Character,Integer> map = new HashMap<Character,Integer>();
-        //may use int[256] instead of HashMap!!!!!!!!!!!!
+        //may use int[256] instead of HeshMap!!!!!!!!!!!!
         int result = 0;
         int i = 0;
         for(int j = 0;j<s.length();j++){
@@ -26,6 +26,6 @@ public class Solution {
         }
         return Math.max(result,s.length()-i);
     }
-    
+    //just test 
     
 }
